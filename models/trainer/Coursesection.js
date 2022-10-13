@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema
 
 var schema = new Schema({
-    courseid: {type: String,required: true},
+    courseid: { type: mongoose.Schema.Types.ObjectId, ref: "courses" },
     name: {type: String,required: true},
     srno: {type: Number,required: true}
 });

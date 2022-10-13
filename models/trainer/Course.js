@@ -2,7 +2,7 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var schema = new Schema({
-    trainerid: { type: String, required: true },
+    trainerid: { type: mongoose.Schema.Types.ObjectId, ref: "trainers" },
     title: { type: String, required: true },
     description: { type: String, required: true },
     imagepath: { type: String, required: true },
